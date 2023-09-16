@@ -39,7 +39,7 @@ app.get('/api/info', (req, res) => {
 })
 
 app.get('/api/persons/:id', (request, response) => {
-    const id = person(request.params.id)
+    const id = Number(request.params.id)
     const person = persons.find(person => person.id === id)
     
     if (person) {
@@ -49,7 +49,7 @@ app.get('/api/persons/:id', (request, response) => {
     }
 })
 
-app.delete('/api/person/:id', (request, response) => {
+app.delete('/api/persons/:id', (request, response) => {
     const id = person(request.params.id)
     persons = persons.filter(person => person.id !== id)
   
