@@ -55,22 +55,22 @@ app.use((request, response, next) => {
 let persons = [
     {
         name: "Arto Hellas",
-        person: "040-123456",
+        number: "040-123456",
         id: 1
     },
     {
         name: "Ada Lovelace",
-        person: "39-44-5323523",
+        number: "39-44-5323523",
         id: 2
     },
     {
         name: "Dan Abramov",
-        person: "12-43-234345",
+        number: "12-43-234345",
         id: 3
     },
     {
         name: "Mary Poppendieck",
-        person: "39-23-6423122",
+        number: "39-23-6423122",
         id: 4
     }
 ]
@@ -120,7 +120,7 @@ app.post('/api/persons', (request, response) => {
 
     const person = {
         name: body.name,
-        person: body.number,
+        number: body.number,
         id: Math.floor(Math.random() * 1000)
     }
     //console.log(person)
