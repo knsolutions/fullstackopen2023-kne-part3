@@ -106,7 +106,7 @@ app.post('/api/persons', (request, response) => {
 
     //console.log(body)
 
-    if (!body.name || !body.person) {
+    if (!body.name || !body.number) {
         return response.status(400).json({ 
           error: 'name missing or person missing' 
         })
@@ -120,7 +120,7 @@ app.post('/api/persons', (request, response) => {
 
     const person = {
         name: body.name,
-        person: body.person,
+        person: body.number,
         id: Math.floor(Math.random() * 1000)
     }
     //console.log(person)
