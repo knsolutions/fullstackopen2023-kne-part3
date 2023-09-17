@@ -1,5 +1,6 @@
 const express = require('express')
 var morgan = require('morgan')
+const cors = require('cors')
 const app = express()
 
 const requestLogger = (request, response, next) => {
@@ -10,7 +11,7 @@ const requestLogger = (request, response, next) => {
     next()
   }
 
-
+app.use(cors())
 app.use(express.json());
 
 //app.use(requestLogger);
