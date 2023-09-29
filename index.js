@@ -6,7 +6,7 @@ const Person = require("./models/person")
 
 const app = express()
 
-var process
+var process = require("process")
 
 const PORT = process.env.PORT
 
